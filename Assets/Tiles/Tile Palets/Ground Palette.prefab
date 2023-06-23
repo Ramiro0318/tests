@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4089807019104433144}
   - component: {fileID: 4149558688540751100}
   m_Layer: 0
-  m_Name: Rectangular Palette
+  m_Name: Ground Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 5760883846364146089}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &4149558688540751100
 Grid:
@@ -199,7 +199,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &8459454812503590509
+--- !u!114 &7359781488811229712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
