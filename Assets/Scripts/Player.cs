@@ -13,14 +13,13 @@ public class Player : MonoBehaviour
     public int sec = 0;
     public float speed = 2.0f;
     public float tickTimer = 0f, idleTimer = 0f;
+    public int life = 3;
 
     public Vector2 horizontalMovement, verticalMovement;
     public Vector2 movement2axis;
     private Animator animator;
     float horizontalInput, verticalInput;
-
-
-    private const float TickTacker = 1.0f; 
+ 
     
 
     private void Awake()
