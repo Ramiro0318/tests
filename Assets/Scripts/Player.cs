@@ -69,8 +69,8 @@ public class Player : MonoBehaviour
         animator.SetFloat("Y axis float", verticalInput);
 
 
-        animator.SetInteger("X axis float", (int)horizontalInput);
-        animator.SetInteger("Y axis float", (int)verticalInput);
+        //animator.SetInteger("X axis float", (int)horizontalInput);
+        //animator.SetInteger("Y axis float", (int)verticalInput);
 
 
         if (movement2axis == Vector2.zero)
