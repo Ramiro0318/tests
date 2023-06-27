@@ -34,13 +34,8 @@ namespace Pruebas
                     StartCoroutine(ShootingTiming());
                     coroutineCalled = true;
                 }
-                //functionTimer = new FunctionTimer(Shoot,1f);
-                ////Debug.Log("Big Shooting");
-                
-                ////functionTimer.Update();
-                ////InvokeRepeating("Shoot", 1f, 0.5f);
             }
-            if (distanceToObjective > range)
+            else
             {
                 coroutineCalled = false;
                 inRange = false;
@@ -70,18 +65,19 @@ namespace Pruebas
 
                 Bullet bigBulletComponent = bigBullet.GetComponent<Bullet>();
 
-                bigBulletComponent.direction = Objective.transform.position;
+                bigBulletComponent.direction = (transform.position - Objective.transform.position) * -1;
+
+                
             }
         }
 
         IEnumerator ShootingTiming()
         {
-            while (inRange == true && coroutineCalled == false)
+            while (inRange == true && !coroutineCalled)
             {
                 Debug.Log("Big Shoot!");
                 InvokeRepeating("Shoot", 1f,1f);
-
-                yield return null; //new WaitForSeconds(1);
+                yield return null; 
             }
         }
     }
