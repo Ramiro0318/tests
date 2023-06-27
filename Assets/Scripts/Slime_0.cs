@@ -13,7 +13,7 @@ namespace Pruebas
         private Animator animator;
         public float shootingSpeed = 2f, range = 1.5f;
         private float distanceToObjective;
-        public bool inRange;
+        public bool inRange, coroutineCalled;
 
 
         private void Awake()
@@ -22,16 +22,14 @@ namespace Pruebas
         }
         void Update()
         {
-            distanceToObjective = Vector2.Distance( transform.position, Objective.transform.position);
-            //inRange = Physics.CheckSphere(transform.position, range, capaDeJugador);
-
+            distanceToObjective = Vector2.Distance(transform.position, Objective.transform.position);
             if (distanceToObjective <= range) 
             {
                 inRange = true;
-                if (Time.time % shootingSpeed <= 0.005f)
+                if (!coroutineCalled)
                 {
                     StartCoroutine(ShootingTiming());
-                    //Invoke("Shoot", 1f);
+                    coroutineCalled = true;
                 }
             }
             else { inRange = false; }
@@ -69,7 +67,8 @@ namespace Pruebas
             Debug.Log("Shoot!");
             Invoke("Shoot", 1f);
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
+            coroutineCalled = false;
         }
     }
 }
