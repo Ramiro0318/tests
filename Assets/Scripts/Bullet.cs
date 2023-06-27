@@ -13,9 +13,11 @@ namespace Pruebas
         {
             Destroy(gameObject, livingTime);
         }
+
         private void Update()
         {
-            Shoot();
+            //Shoot();
+            Invoke("Shoot",1f * Time.deltaTime);
         }
 
         public void Shoot()
