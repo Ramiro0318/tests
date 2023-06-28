@@ -11,7 +11,9 @@ namespace Pruebas
         public GameObject Shooter;
         public GameObject Objective;
         private Animator animator;
+        private AudioSource _audio;
         public float shootingSpeed = 2f, range = 1.5f;
+        public string Axis;
         private float distanceToObjective;
         public bool inRange, coroutineCalled;
 
@@ -19,6 +21,7 @@ namespace Pruebas
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            _audio = GetComponent<AudioSource>();
         }
         void Update()
         {
@@ -52,7 +55,24 @@ namespace Pruebas
             
                 Bullet bulletComponent = myBullet.GetComponent<Bullet>();
 
-                bulletComponent.direction = Vector2.up;
+                //bulletComponent.direction = Vector2.up;
+
+                switch (Axis)
+                {
+                    case "Right":
+                        bulletComponent.direction = Vector2.right;
+                        break;
+                    case "Left":
+                        bulletComponent.direction = Vector2.left;
+                        break;
+                    case "Down":
+                        bulletComponent.direction = Vector2.down;
+                        break;
+                    default:
+                        bulletComponent.direction = Vector2.up;
+                        break;
+                }
+                _audio.Play();
             }
         }
 

@@ -5,6 +5,12 @@ using UnityEngine;
 
 namespace Pruebas
 {
+    /* Pendiente de verificar
+     * Solo funciona en una ocación
+     * verificar el video
+     * https://www.youtube.com/watch?v=1hsppNzx7_0&t=596s
+     */
+
     public class FunctionTimer
     {
         private Action action;
@@ -21,8 +27,6 @@ namespace Pruebas
 
         public void Update()
         {
-            //saveTimer = timer;
-            //Reset();
             if (!isDestryed)
             {
                 timer -= Time.deltaTime;
@@ -30,7 +34,6 @@ namespace Pruebas
                 {
                     action();
                     DestroySelf();
-                    //timer = saveTimer;
                 }
             }
         }
@@ -39,10 +42,5 @@ namespace Pruebas
         {
             isDestryed = true;        
         }
-        //private void Reset()
-        //{
-        //    isDestryed = false;        
-        //}
-
     }
 }

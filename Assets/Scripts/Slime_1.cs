@@ -15,11 +15,13 @@ namespace Pruebas
         public float shootingSpeed = 1f, range = 1f;
         private float distanceToObjective;
         public bool inRange, coroutineCalled;
-        private FunctionTimer functionTimer;
+        //private FunctionTimer functionTimer;
+        private AudioSource _audio;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            _audio = GetComponent<AudioSource>();
         }
 
         public void Update()
@@ -66,9 +68,9 @@ namespace Pruebas
                 Bullet bigBulletComponent = bigBullet.GetComponent<Bullet>();
 
                 bigBulletComponent.direction = (transform.position - Objective.transform.position) * -1;
-
-                
+                _audio.Play();
             }
+            
         }
 
         IEnumerator ShootingTiming()
