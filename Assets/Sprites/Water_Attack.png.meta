@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2c9a9cce72d85f48bb8479508e26f04
+guid: 4e0d722de2f5ef24fa695d2a6d1a0f96
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,85 +136,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Water_Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 752ae87624b6d014d9d3b739b0a08b3f
-      internalID: -1431424797
+      spriteID: 450c526d9a1f039428558248ca99910d
+      internalID: 79647139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Water_Attack_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 655d6677eba45b34e988700fcae1382d
-      internalID: -1990028726
+      spriteID: 34c45309e0de9b24b8fe350db1dfbc69
+      internalID: 295310685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Water_Attack_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e61edb93e0f0c24fbe35fdf8153854f
-      internalID: 1151178733
+      spriteID: 7e5e429d1f5f9f24d915d893bff81c3e
+      internalID: -997520344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_3
+      name: Water_Attack_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 3
+      pivot: {x: 1, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5b3d775a01e70946b9acc480b92fdd7
-      internalID: -148323066
+      spriteID: b6fa7bed198f8c14a932ee2efbda4026
+      internalID: 100776819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7408e0b7be94649968886a6e77258d
+      internalID: 1106313403
       vertices: []
       indices: 
       edges: []
@@ -230,10 +251,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Jump_0: -1431424797
-      Jump_1: -1990028726
-      Jump_2: 1151178733
-      Jump_3: -148323066
+      Water_Attack_0: 79647139
+      Water_Attack_1: 295310685
+      Water_Attack_2: -997520344
+      Water_Attack_3: 100776819
+      Water_Attack_4: 1106313403
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
