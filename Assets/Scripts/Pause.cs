@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Pruebas
 {
-    public class UI : MonoBehaviour
+    public class Pause : MonoBehaviour
     {
    
      
