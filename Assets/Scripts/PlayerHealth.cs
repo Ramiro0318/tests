@@ -7,7 +7,7 @@ namespace Pruebas
 {
     public class PlayerHealth : MonoBehaviour
     {
-        public int totalHealth = 100;
+        public int maxHealth = 100;
         public int health;
 
         private SpriteRenderer _rednderer;
@@ -19,7 +19,7 @@ namespace Pruebas
 
         private void Start()
         {
-            health = totalHealth;
+            health = maxHealth;
         }
 
         public void AddDamage( int amount) 
@@ -36,9 +36,9 @@ namespace Pruebas
         public void AddHealth( int amount) 
         {
             health -= amount;
-            if (health >= totalHealth) 
+            if (health >= maxHealth) 
             {
-                health = totalHealth;
+                health = maxHealth;
             }
             Debug.Log($"The Player has been healed, currently life is : {health}");
         }

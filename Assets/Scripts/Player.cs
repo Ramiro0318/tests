@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public Vector2 horizontalMovement, verticalMovement;
     public Vector2 movement2axis;
     private Animator animator;
+    public GameObject GameOverFadeOut;
     
     float horizontalInput, verticalInput;
  
@@ -87,22 +88,8 @@ public class Player : MonoBehaviour
         {
             isDeath = true;
             animator.SetTrigger("Death");
+            GameOverFadeOut.SetActive(true);
         }
     }
-
-    //private void OnTriggerEnter2D(Collider2D hit)
-    //{
-    //    if (hit.tag == "Projectiles") 
-    //    {
-    //        Debug.Log("I have been shooted xc");
-        
-    //        //GetDamage();
-    //        life -= 10; // how
-    //    }
-    //}
-    //public void GetDamage(int damage)
-    //{
-    //    life -= damage;
-    //}
 }
 
