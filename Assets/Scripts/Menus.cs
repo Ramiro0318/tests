@@ -10,34 +10,63 @@ namespace Pruebas
 {
     public class Menus : MonoBehaviour
     {
-        public Index ActualScene = 0;
+        public Index ActualScene;
         public Index PreviousValidScene;
+        public int sceneNumber;
 
-        private void Scene2loader()
-        {
-            SceneManager.LoadScene(2);
-        }
+        //private void Scene2loader()
+        //{
+        //    sceneNumber = 2;
+        //    Debug.Log(sceneNumber);
+        //    SceneManager.LoadScene(sceneNumber);
+        //}
 
         public void LoadNextScene() 
         {
             switch (ActualScene.Value)
             {
-                case 0: Invoke("Scene2loader", 0.7f );
-                    ActualScene = 2;
+                //case 0: Invoke("Scene2loader", 0.7f );
+                //    break;
+                //case not 0 and not 1: 
+                //    SceneManager.LoadScene(ActualScene.Value + 1);
+                //    PreviousValidScene = ActualScene.Value;
+                //    ActualScene =  ActualScene.Value + 1;
+                //    break;
+                //default: SceneManager.LoadScene(PreviousValidScene.Value);
+                //    break;
+                case 0 : SceneManager.LoadScene(2);
+                    sceneNumber = 2;
+                    Debug.Log(sceneNumber);
                     break;
-                case not 0 and not 1: 
-                    SceneManager.LoadScene(ActualScene.Value + 1);
-                    PreviousValidScene = ActualScene.Value;
-                    ActualScene =  ActualScene.Value + 1;
+                case 2: SceneManager.LoadScene(3);
+                    sceneNumber = 3;
                     break;
-                default: SceneManager.LoadScene(PreviousValidScene.Value);
+                case 3: SceneManager.LoadScene(4);
+                    sceneNumber = 4;
                     break;
+                case 4: SceneManager.LoadScene(5);
+                    sceneNumber = 5;
+                    break;
+                default: break;
             }
         }
 
         public void ResetScene() 
         {
-            SceneManager.LoadScene(ActualScene.Value);
+            //StartCoroutine("ResetSceneCoroutine");
+            Invoke("ResetScene_",2f);
+            Debug.Log(sceneNumber);
+        }
+
+        private void ResetScene_() 
+        {
+            SceneManager.LoadScene(sceneNumber);  
+        }
+        public void ToMainMenu() 
+        {
+            SceneManager.LoadScene(0);
+            sceneNumber = 0;
+            Debug.Log(sceneNumber);
         }
 
         public void Quit() 

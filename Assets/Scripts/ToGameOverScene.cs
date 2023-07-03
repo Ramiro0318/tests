@@ -13,16 +13,26 @@ namespace Pruebas
 
         private void Update()
         {
-            if (invoked ==false)       
-            { 
-                invoked = true;
-                animator.SetTrigger("ChangeScene"); 
-                Invoke("ToGOStrean", 2.5f);
-            }
+            //if (invoked ==false)       
+            //{ 
+            //    invoked = true;
+            //    Invoke("ToGOStrean", 2.5f);
+            //}
         }
 
-        private void ToGOStrean() 
+        public void ToGOScrean(bool isDead) 
         {
+            if (isDead) 
+            {
+                StartCoroutine("GameOverCoroutine");
+            }
+        }
+        private IEnumerator GameOverCoroutine() 
+        {
+        
+            animator.SetTrigger("ChangeScene");
+            Debug.Log("GameOver Scene");
+            yield return new WaitForSeconds(2.5f);
             SceneManager.LoadScene(1);
         }
     }

@@ -7,8 +7,11 @@ namespace Pruebas
 {
     public class PlayerHealth : MonoBehaviour
     {
-        public int maxHealth = 100;
-        public int health;
+        [SerializeField] public float health;
+        [SerializeField] private float maxHealth;
+        [SerializeField] private HealthBar healthBar;
+        //public float maxHealth = 100;
+        //public float health;
 
         private SpriteRenderer _rednderer;
 
@@ -20,6 +23,9 @@ namespace Pruebas
         private void Start()
         {
             health = maxHealth;
+            healthBar.InitHealthBar(health);
+            //healthBar.MaxHealth(maxHealth);
+            //healthBar.CurrentHealth(health);
         }
 
         public void AddDamage( int amount) 
@@ -30,6 +36,7 @@ namespace Pruebas
             {
                 health = 0;
             }
+            healthBar.CurrentHealth(health);
             Debug.Log($"The Player has been hit, currently life is : {health}");
         }
         
@@ -40,6 +47,7 @@ namespace Pruebas
             {
                 health = maxHealth;
             }
+            healthBar.CurrentHealth(health);
             Debug.Log($"The Player has been healed, currently life is : {health}");
         }
 

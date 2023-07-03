@@ -13,13 +13,14 @@ public class Player : MonoBehaviour
 {
     public float speed = 2.0f;
     public float tickTimer = 0f, idleTimer = 0f;
-    public int life;
+    public float life;
     public bool isDeath;
 
     public Vector2 horizontalMovement, verticalMovement;
     public Vector2 movement2axis;
     private Animator animator;
     public GameObject GameOverFadeOut;
+    [SerializeField] public ToGameOverScene gameOverScene; 
     
     float horizontalInput, verticalInput;
  
@@ -89,6 +90,7 @@ public class Player : MonoBehaviour
             isDeath = true;
             animator.SetTrigger("Death");
             GameOverFadeOut.SetActive(true);
+            gameOverScene.ToGOScrean(true);
         }
     }
 }
